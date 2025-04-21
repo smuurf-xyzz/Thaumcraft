@@ -84,7 +84,7 @@
         {
           "text": "research.HEDGEALCHEMY.stage.1",
           "required_knowledge":["OBSERVATION;ALCHEMY;1"],
-          "required_craft":["thaumcraft:tallow","thaumcraft:leather"],
+          "required_craft":["thaumcraft:tallow","minecraft:leather"],
           "recipes": ["thaumcraft:hedge_tallow", "thaumcraft:hedge_leather"]
         },
         {
