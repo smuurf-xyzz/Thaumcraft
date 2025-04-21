@@ -1,0 +1,13 @@
+{
+  "type": "thaumcraft:crucible",
+  "aspects": {
+    "ignis": 1
+  },
+  "catalyst": {
+    "item": "minecraft:rotten_flesh"
+  },
+  "research": "HEDGEALCHEMY@1",
+  "result": {
+    "item": "thaumcraft:tallow"
+  }
+}

@@ -60,6 +60,7 @@ public class ConfigItems {
         event.register("cluster_copper", (ItemsTC.clusterCopper = new ItemTCBase(new Item.Properties())));
         event.register("cluster_gold", (ItemsTC.clusterGold = new ItemTCBase(new Item.Properties())));
         event.register("cluster_cinnabar", (ItemsTC.clusterCinnabar = new ItemTCBase(new Item.Properties())));
+        event.register("tallow", (ItemsTC.tallow = new ItemTCBase(new Item.Properties())));
         event.register("plate_brass", (ItemsTC.brassPlate = new ItemTCBase(new Item.Properties())));
         event.register("plate_thaumium", (ItemsTC.thaumiumPlate = new ItemTCBase(new Item.Properties())));
         event.register("filter", (ItemsTC.filter = new ItemTCBase(new Item.Properties())));

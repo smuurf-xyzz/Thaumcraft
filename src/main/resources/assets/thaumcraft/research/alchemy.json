@@ -77,7 +77,7 @@
     {
       "key": "HEDGEALCHEMY",
       "name": "research.HEDGEALCHEMY.title",
-      "icons": [ "thaumcraft:textures/items/tallow.png" ],
+      "icons": [ "thaumcraft:textures/item/tallow.png" ],
       "category": "ALCHEMY", "location": [ -2,0 ],
       "parents": [ "BASEALCHEMY" ],
       "stages": [

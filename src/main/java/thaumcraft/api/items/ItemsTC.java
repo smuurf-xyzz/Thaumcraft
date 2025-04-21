@@ -27,6 +27,7 @@ public class ItemsTC {
     public static Item clusterCopper;
     public static Item clusterCinnabar;
     public static Item crystalEssence;
+    public static Item tallow;
     public static Item brassPlate;
     public static Item thaumiumPlate;
     public static Item salisMundus;
