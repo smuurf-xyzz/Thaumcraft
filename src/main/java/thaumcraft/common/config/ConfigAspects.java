@@ -3,13 +3,16 @@ package thaumcraft.common.config;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
+import thaumcraft.api.ItemTagsTC;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.blocks.BlocksTC;
 import thaumcraft.api.internal.CommonInternals;
+import thaumcraft.api.items.ItemsTC;
 
 public class ConfigAspects {
     public static void postInit() {
@@ -38,13 +41,25 @@ public class ConfigAspects {
 //        glowstone
         ThaumcraftApi.registerObjectTag(Tags.Blocks.ORES_COPPER, new AspectList().add(Aspect.EARTH, 5).add(Aspect.METAL, 10).add(Aspect.EXCHANGE, 5));
         ThaumcraftApi.registerObjectTag(Tags.Items.INGOTS_COPPER, new AspectList().add(Aspect.METAL, 10).add(Aspect.EXCHANGE, 5));
+        ThaumcraftApi.registerObjectTag(ItemTagsTC.INGOTS_BRASS, new AspectList().add(Aspect.METAL, 10).add(Aspect.TOOL, 5));
         ThaumcraftApi.registerObjectTag(BlockTags.BASE_STONE_OVERWORLD, new AspectList().add(Aspect.EARTH, 5));
-        ThaumcraftApi.registerObjectTag(BlockTags.SAND, new AspectList().add(Aspect.EARTH, 5).add(Aspect.ENTROPY, 5));
         ThaumcraftApi.registerObjectTag(Tags.Blocks.COBBLESTONE, new AspectList().add(Aspect.EARTH, 5).add(Aspect.ENTROPY, 1));
         ThaumcraftApi.registerObjectTag(BlockTags.DIRT, new AspectList().add(Aspect.EARTH, 5).add(Aspect.PLANT, 2));
+        ThaumcraftApi.registerObjectTag(BlockTags.SAND, new AspectList().add(Aspect.EARTH, 5).add(Aspect.ENTROPY, 5));
+        ThaumcraftApi.registerObjectTag(Tags.Blocks.END_STONES, new AspectList().add(Aspect.EARTH, 5).add(Aspect.DARKNESS, 5));
+        ThaumcraftApi.registerObjectTag(Tags.Blocks.GRAVEL, new AspectList().add(Aspect.EARTH, 5).add(Aspect.ENTROPY, 2));
+        ThaumcraftApi.registerObjectTag(new ItemStack(Blocks.MYCELIUM), new AspectList().add(Aspect.EARTH, 5).add(Aspect.PLANT, 1).add(Aspect.FLUX, 1));
+        ThaumcraftApi.registerObjectTag(new ItemStack(Items.CLAY_BALL), new AspectList().add(Aspect.WATER, 5).add(Aspect.EARTH, 5));
+        ThaumcraftApi.registerObjectTag(new ItemStack(Blocks.TERRACOTTA), new AspectList().add(Aspect.WATER, 5).add(Aspect.EARTH, 5));
+        ThaumcraftApi.registerObjectTag(BlockTags.LOGS, new AspectList().add(Aspect.PLANT, 20));
         ThaumcraftApi.registerObjectTag(BlockTags.WOOL, new AspectList().add(Aspect.BEAST, 15).add(Aspect.CRAFT, 5));
+        ThaumcraftApi.registerObjectTag(new ItemStack(Blocks.FIRE), new AspectList().add(Aspect.FIRE, 20));
+        ThaumcraftApi.registerObjectTag(new ItemStack(Blocks.MAGMA_BLOCK), new AspectList().add(Aspect.FIRE, 10).add(Aspect.EARTH, 5));
+//        ThaumcraftApi.registerComplexObjectTag(new ItemStack(Blocks.TORCH, 1), new AspectList().add(Aspect.LIGHT, 5));
+        ThaumcraftApi.registerObjectTag(new ItemStack(Items.FLINT), new AspectList().add(Aspect.EARTH, 5).add(Aspect.TOOL, 5));
+        ThaumcraftApi.registerObjectTag(new ItemStack(Items.GUNPOWDER), new AspectList().add(Aspect.FIRE, 10).add(Aspect.ENTROPY, 10).add(Aspect.ALCHEMY, 5));
         ThaumcraftApi.registerObjectTag(new ItemStack(Blocks.TRIPWIRE_HOOK, 1), new AspectList().add(Aspect.SENSES, 5).add(Aspect.MECHANISM, 5).add(Aspect.TRAP, 5));
-        ThaumcraftApi.registerComplexObjectTag(new ItemStack(Blocks.TORCH, 1), new AspectList().add(Aspect.LIGHT, 5));
+
         ThaumcraftApi.registerObjectTag(new ItemStack(BlocksTC.crystalAir, 1), new AspectList().add(Aspect.AIR, 15).add(Aspect.CRYSTAL, 10));
         ThaumcraftApi.registerObjectTag(new ItemStack(BlocksTC.crystalFire, 1), new AspectList().add(Aspect.FIRE, 15).add(Aspect.CRYSTAL, 10));
         ThaumcraftApi.registerObjectTag(new ItemStack(BlocksTC.crystalWater, 1), new AspectList().add(Aspect.WATER, 15).add(Aspect.CRYSTAL, 10));
@@ -52,5 +67,6 @@ public class ConfigAspects {
         ThaumcraftApi.registerObjectTag(new ItemStack(BlocksTC.crystalOrder, 1), new AspectList().add(Aspect.ORDER, 15).add(Aspect.CRYSTAL, 10));
         ThaumcraftApi.registerObjectTag(new ItemStack(BlocksTC.crystalEntropy, 1), new AspectList().add(Aspect.ENTROPY, 15).add(Aspect.CRYSTAL, 10));
         ThaumcraftApi.registerObjectTag(new ItemStack(BlocksTC.crystalTaint, 1), new AspectList().add(Aspect.FLUX, 15).add(Aspect.CRYSTAL, 10));
+        ThaumcraftApi.registerObjectTag(new ItemStack(ItemsTC.salisMundus), new AspectList().add(Aspect.MAGIC, 5).add(Aspect.ENERGY, 5));
     }
 }

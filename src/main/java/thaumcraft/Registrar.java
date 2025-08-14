@@ -17,15 +17,14 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
 import thaumcraft.api.BlockTagsTC;
 import thaumcraft.api.ItemTagsTC;
+import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.crafting.CrucibleRecipe;
 import thaumcraft.api.crafting.ShapedArcaneRecipe;
 import thaumcraft.client.ItemPropertiesHandler;
 import thaumcraft.client.gui.ContainerArcaneWorkbench;
-import thaumcraft.common.config.ConfigBlocks;
-import thaumcraft.common.config.ConfigEntities;
-import thaumcraft.common.config.ConfigItems;
-import thaumcraft.common.config.ConfigRecipes;
+import thaumcraft.common.config.*;
 import thaumcraft.common.container.ContainerResearchTable;
+import thaumcraft.common.lib.InternalMethodHandler;
 import thaumcraft.common.lib.SoundsTC;
 import thaumcraft.common.lib.crafting.RecipeMagicDust;
 import thaumcraft.common.world.biomes.BiomeHandler;
@@ -34,6 +33,9 @@ import thaumcraft.common.world.biomes.BiomeHandler;
 public class Registrar {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
+        ThaumcraftApi.internalMethods = new InternalMethodHandler();
+        ConfigAspects.postInit();
+
         DataGenerator generator = event.getGenerator();
         var fileHelper = event.getExistingFileHelper();
         generator.addProvider(true, new ConfigRecipes(generator));

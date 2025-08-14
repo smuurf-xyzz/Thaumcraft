@@ -2,12 +2,24 @@ package thaumcraft.api.aspects;
 
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
+import net.minecraft.world.item.ItemStack;
 
 import java.io.Serializable;
 import java.util.LinkedHashMap;
 
 public class AspectList implements Serializable {
     public LinkedHashMap<Aspect, Integer> aspects = new LinkedHashMap<>();
+
+    public AspectList(ItemStack stack) {
+        try {
+            AspectList temp = AspectHelper.getObjectAspects(stack);
+            if (temp != null)
+                for (Aspect tag : temp.getAspects()) {
+                    add(tag, temp.getAmount(tag));
+                }
+        } catch (Exception ignored) {
+        }
+    }
 
     public AspectList() {
     }
