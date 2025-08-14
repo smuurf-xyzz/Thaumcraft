@@ -37,7 +37,7 @@ public class ConfigAspects {
         ThaumcraftApi.registerObjectTag(Tags.Blocks.ORES_COAL, new AspectList().add(Aspect.EARTH, 5).add(Aspect.ENERGY, 15).add(Aspect.FIRE, 15));
         ThaumcraftApi.registerObjectTag(ItemTags.COALS, new AspectList().add(Aspect.ENERGY, 10).add(Aspect.FIRE, 10));
         ThaumcraftApi.registerObjectTag(Tags.Items.DUSTS_REDSTONE, new AspectList().add(Aspect.ENERGY, 10));
-        ThaumcraftApi.registerObjectTag(Tags.Items.DUSTS_GLOWSTONE, new AspectList().add(Aspect.SENSES, 5).add(Aspect.LIGHT, 10));
+        ThaumcraftApi.registerObjectTag(new ItemStack(Items.GLOWSTONE_DUST), new AspectList().add(Aspect.SENSES, 5).add(Aspect.LIGHT, 10));
 //        glowstone
         ThaumcraftApi.registerObjectTag(Tags.Blocks.ORES_COPPER, new AspectList().add(Aspect.EARTH, 5).add(Aspect.METAL, 10).add(Aspect.EXCHANGE, 5));
         ThaumcraftApi.registerObjectTag(Tags.Items.INGOTS_COPPER, new AspectList().add(Aspect.METAL, 10).add(Aspect.EXCHANGE, 5));
