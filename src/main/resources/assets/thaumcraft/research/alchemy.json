@@ -90,7 +90,7 @@
         {
           "text": "research.HEDGEALCHEMY.stage.2",
           "required_knowledge":["OBSERVATION;ALCHEMY;1"],
-          "required_craft":["minecraft:gunpowder","minecraft:slime_ball","minecraft:dye","minecraft:glowstone_dust"],
+          "required_craft":["minecraft:gunpowder","minecraft:slime_ball","minecraft:ink_sac","minecraft:glowstone_dust"],
           "recipes": ["thaumcraft:hedge_tallow","thaumcraft:tallowcandles", "thaumcraft:hedge_leather",
             "thaumcraft:hedge_gunpowder","thaumcraft:hedge_slime","thaumcraft:hedge_dye","thaumcraft:hedge_glowstone"]
         },
