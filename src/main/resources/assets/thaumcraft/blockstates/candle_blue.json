@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thaumcraft:block/candle",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "thaumcraft:block/candle",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "thaumcraft:block/candle"
+    },
+    "facing=west": {
+      "model": "thaumcraft:block/candle",
+      "y": 90
+    }
+  }
+}

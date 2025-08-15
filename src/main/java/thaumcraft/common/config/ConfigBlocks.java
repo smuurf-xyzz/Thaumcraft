@@ -17,10 +17,7 @@ import thaumcraft.common.blockentities.crafting.BlockEntityArcaneWorkbench;
 import thaumcraft.common.blockentities.crafting.BlockEntityCrucible;
 import thaumcraft.common.blockentities.crafting.BlockEntityResearchTable;
 import thaumcraft.common.blockentities.misc.BlockEntityNitor;
-import thaumcraft.common.blocks.basic.BlockMetalTC;
-import thaumcraft.common.blocks.basic.BlockPlanksTC;
-import thaumcraft.common.blocks.basic.BlockStoneTC;
-import thaumcraft.common.blocks.basic.BlockTable;
+import thaumcraft.common.blocks.basic.*;
 import thaumcraft.common.blocks.crafting.BlockArcaneWorkbench;
 import thaumcraft.common.blocks.crafting.BlockCrucible;
 import thaumcraft.common.blocks.crafting.BlockResearchTable;
@@ -60,6 +57,9 @@ public class ConfigBlocks {
         BlocksTC.tableWood = registerBlock("table_wood", new BlockTable(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).destroyTime(2.0f)));
         BlocksTC.metalBlockBrass = registerBlock("metal_brass", new BlockMetalTC(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).requiresCorrectToolForDrops().strength(4.0f, 10.0f)));
         BlocksTC.metalBlockThaumium = registerBlock("metal_thaumium", new BlockMetalTC(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).requiresCorrectToolForDrops().strength(4.0f, 10.0f)));
+        for (DyeColor dye : DyeColor.values()) {
+            BlocksTC.candles.put(dye, registerBlock("candle_" + dye.getName().toLowerCase(), new BlockCandle(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.1f).sound(SoundType.WOOL).lightLevel((pBlockState) -> 14).noCollission().color(dye.getMaterialColor()), dye)));
+        }
         for (DyeColor dye : DyeColor.values()) {
             BlocksTC.nitor.put(dye, registerBlock("nitor_" + dye.getName().toLowerCase(), new BlockNitor(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.1f).sound(SoundType.WOOL).lightLevel((pBlockState) -> 15).noCollission().color(dye.getMaterialColor()), dye)));
         }

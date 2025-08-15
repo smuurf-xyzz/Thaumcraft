@@ -28,8 +28,12 @@ public class ColorHandler {
 
     private static void registerBlockColourHandlers(BlockColors blockColors) {
         BlockColor basicColourHandler = (state, blockAccess, pos, tintIndex) -> state.getBlock().getMapColor(state, blockAccess, pos, MaterialColor.SNOW).col;
-        Block[] basicBlocks = new Block[BlocksTC.nitor.size()];
+        Block[] basicBlocks = new Block[BlocksTC.candles.size() + BlocksTC.nitor.size()];
         int i = 0;
+        for (Block b : BlocksTC.candles.values()) {
+            basicBlocks[i] = b;
+            ++i;
+        }
         for (Block b : BlocksTC.nitor.values()) {
             basicBlocks[i] = b;
             ++i;
@@ -50,8 +54,12 @@ public class ColorHandler {
             BlockState state = ((BlockItem)stack.getItem()).getBlock().defaultBlockState();
             return blockColors.getColor(state, null, null, tintIndex);
         };
-        Block[] basicBlocks = new Block[BlocksTC.nitor.size()];
+        Block[] basicBlocks = new Block[BlocksTC.candles.size() + BlocksTC.nitor.size()];
         int i = 0;
+        for (Block b : BlocksTC.candles.values()) {
+            basicBlocks[i] = b;
+            ++i;
+        }
         for (Block b : BlocksTC.nitor.values()) {
             basicBlocks[i] = b;
             ++i;

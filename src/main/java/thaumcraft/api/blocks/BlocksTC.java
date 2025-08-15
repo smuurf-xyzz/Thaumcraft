@@ -23,7 +23,10 @@ public class BlocksTC {
     public static Block tableWood;
     public static Block metalBlockThaumium;
     public static Block metalBlockBrass;
+
+    public static HashMap<DyeColor,Block> candles = new HashMap<>();
     public static HashMap<DyeColor, Block> nitor = new HashMap<>();
+
     public static Block crucible;
     public static Block arcaneWorkbench;
     public static Block researchTable;
