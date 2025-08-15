@@ -17,6 +17,7 @@ import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.ShapelessRecipe;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import thaumcraft.Thaumcraft;
@@ -117,6 +118,11 @@ public class ConfigRecipes extends RecipeProvider {
         ShapelessRecipeBuilder.shapeless(ItemsTC.scribingTools).group(inkwellGroup).requires(ItemsTC.phial).requires(Items.FEATHER).requires(Tags.Items.DYES_BLACK).unlockedBy("has_dye", has(Tags.Items.DYES_BLACK)).save(pFinishedRecipeConsumer, "thaumcraft:scribingtoolscraft1");
         ShapelessRecipeBuilder.shapeless(ItemsTC.scribingTools).group(inkwellGroup).requires(Items.GLASS_BOTTLE).requires(Items.FEATHER).requires(Tags.Items.DYES_BLACK).unlockedBy("has_dye", has(Tags.Items.DYES_BLACK)).save(pFinishedRecipeConsumer, "thaumcraft:scribingtoolscraft2");
         ShapelessRecipeBuilder.shapeless(ItemsTC.scribingTools).group(inkwellGroup).requires(ItemsTC.scribingTools).requires(Tags.Items.DYES_BLACK).unlockedBy("has_scribingTools", has(ItemsTC.scribingTools)).save(pFinishedRecipeConsumer, "thaumcraft:scribingtoolsrefill");
+        ResourceLocation candlesGroup = new ResourceLocation("thaumcraft", "tallowcandles");
+        ShapedRecipeBuilder.shaped(BlocksTC.candles.get(DyeColor.WHITE), 3).group(candlesGroup.toString()).pattern(" S ").pattern(" T ").pattern(" T ").define('S', Tags.Items.STRING).define('T', ItemsTC.tallow).unlockedBy("has_tallow", has(ItemsTC.tallow)).save(pFinishedRecipeConsumer, "thaumcraft:tallow_candle");
+        for (DyeColor d : DyeColor.values()) {
+            ShapelessRecipeBuilder.shapeless(BlocksTC.candles.get(d)).group(candlesGroup.toString()).requires(d.getTag()).requires(ItemTagsTC.CANDLES).unlockedBy("has_tallow", has(ItemsTC.tallow)).save(pFinishedRecipeConsumer, "thaumcraft:tallow_candle_" + d.getName().toLowerCase());
+        }
     }
 
     public static void initializeSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer) {

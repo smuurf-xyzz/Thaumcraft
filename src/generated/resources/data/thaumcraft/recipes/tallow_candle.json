@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "thaumcraft:tallowcandles",
+  "key": {
+    "S": {
+      "tag": "forge:string"
+    },
+    "T": {
+      "item": "thaumcraft:tallow"
+    }
+  },
+  "pattern": [
+    " S ",
+    " T ",
+    " T "
+  ],
+  "result": {
+    "count": 3,
+    "item": "thaumcraft:candle_white"
+  }
+}

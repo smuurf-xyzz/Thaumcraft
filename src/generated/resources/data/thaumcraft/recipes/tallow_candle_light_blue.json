@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "thaumcraft:tallowcandles",
+  "ingredients": [
+    {
+      "tag": "forge:dyes/light_blue"
+    },
+    {
+      "tag": "thaumcraft:candles"
+    }
+  ],
+  "result": {
+    "item": "thaumcraft:candle_light_blue"
+  }
+}
