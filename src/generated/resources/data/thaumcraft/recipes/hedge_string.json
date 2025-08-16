@@ -1,0 +1,14 @@
+{
+  "type": "thaumcraft:crucible",
+  "aspects": {
+    "bestia": 5,
+    "fabrico": 1
+  },
+  "catalyst": {
+    "item": "minecraft:wheat"
+  },
+  "research": "HEDGEALCHEMY@3",
+  "result": {
+    "item": "minecraft:string"
+  }
+}
