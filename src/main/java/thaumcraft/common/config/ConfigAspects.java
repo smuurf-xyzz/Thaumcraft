@@ -57,6 +57,7 @@ public class ConfigAspects {
         ThaumcraftApi.registerObjectTag(new ItemStack(Blocks.FIRE), new AspectList().add(Aspect.FIRE, 20));
         ThaumcraftApi.registerObjectTag(new ItemStack(Blocks.MAGMA_BLOCK), new AspectList().add(Aspect.FIRE, 10).add(Aspect.EARTH, 5));
 //        ThaumcraftApi.registerComplexObjectTag(new ItemStack(Blocks.TORCH, 1), new AspectList().add(Aspect.LIGHT, 5));
+        ThaumcraftApi.registerObjectTag(new ItemStack(Blocks.COBWEB), new AspectList().add(Aspect.TRAP, 5).add(Aspect.BEAST, 1));
         ThaumcraftApi.registerObjectTag(new ItemStack(Items.FLINT), new AspectList().add(Aspect.EARTH, 5).add(Aspect.TOOL, 5));
         ThaumcraftApi.registerObjectTag(new ItemStack(Items.STRING), new AspectList().add(Aspect.BEAST, 5).add(Aspect.CRAFT, 1));
         ThaumcraftApi.registerObjectTag(new ItemStack(Items.SLIME_BALL), new AspectList().add(Aspect.WATER, 5).add(Aspect.LIFE, 5).add(Aspect.ALCHEMY, 1));
