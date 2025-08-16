@@ -52,6 +52,7 @@ public class ConfigAspects {
         ThaumcraftApi.registerObjectTag(new ItemStack(Items.CLAY_BALL), new AspectList().add(Aspect.WATER, 5).add(Aspect.EARTH, 5));
         ThaumcraftApi.registerObjectTag(new ItemStack(Blocks.TERRACOTTA), new AspectList().add(Aspect.WATER, 5).add(Aspect.EARTH, 5));
         ThaumcraftApi.registerObjectTag(BlockTags.LOGS, new AspectList().add(Aspect.PLANT, 20));
+        ThaumcraftApi.registerObjectTag(new ItemStack(Items.NETHER_WART), new AspectList().add(Aspect.PLANT, 1).add(Aspect.FLUX, 2).add(Aspect.ALCHEMY, 3));
         ThaumcraftApi.registerObjectTag(new ItemStack(Items.WHEAT), new AspectList().add(Aspect.PLANT, 5).add(Aspect.LIFE, 5));
         ThaumcraftApi.registerObjectTag(BlockTags.WOOL, new AspectList().add(Aspect.BEAST, 15).add(Aspect.CRAFT, 5));
         ThaumcraftApi.registerObjectTag(new ItemStack(Blocks.FIRE), new AspectList().add(Aspect.FIRE, 20));
@@ -62,6 +63,8 @@ public class ConfigAspects {
         ThaumcraftApi.registerObjectTag(new ItemStack(Items.STRING), new AspectList().add(Aspect.BEAST, 5).add(Aspect.CRAFT, 1));
         ThaumcraftApi.registerObjectTag(new ItemStack(Items.SLIME_BALL), new AspectList().add(Aspect.WATER, 5).add(Aspect.LIFE, 5).add(Aspect.ALCHEMY, 1));
         ThaumcraftApi.registerObjectTag(new ItemStack(Items.GUNPOWDER), new AspectList().add(Aspect.FIRE, 10).add(Aspect.ENTROPY, 10).add(Aspect.ALCHEMY, 5));
+        ThaumcraftApi.registerObjectTag(new ItemStack(Items.RABBIT_FOOT), new AspectList().add(Aspect.BEAST, 5).add(Aspect.PROTECT, 5).add(Aspect.MOTION, 10).add(Aspect.ALCHEMY, 5));
+        ThaumcraftApi.registerObjectTag(new ItemStack(Items.GHAST_TEAR), new AspectList().add(Aspect.UNDEAD, 5).add(Aspect.SOUL, 10).add(Aspect.ALCHEMY, 10));
         ThaumcraftApi.registerObjectTag(new ItemStack(Items.INK_SAC), new AspectList().add(Aspect.WATER, 2).add(Aspect.BEAST, 2).add(Aspect.SENSES, 5));
         ThaumcraftApi.registerObjectTag(new ItemStack(Blocks.TRIPWIRE_HOOK, 1), new AspectList().add(Aspect.SENSES, 5).add(Aspect.MECHANISM, 5).add(Aspect.TRAP, 5));
 
