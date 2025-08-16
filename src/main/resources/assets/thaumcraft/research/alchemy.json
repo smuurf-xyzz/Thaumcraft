@@ -97,7 +97,7 @@
         {
           "text": "research.HEDGEALCHEMY.stage.3",
           "required_knowledge":["OBSERVATION;ALCHEMY;1"],
-          "required_craft":["minecraft:clay_ball","minecraft:string","minecraft:web","minecraft:lava_bucket"],
+          "required_craft":["minecraft:clay_ball","minecraft:string","minecraft:cobweb","minecraft:lava_bucket"],
           "recipes": ["thaumcraft:hedge_tallow","thaumcraft:tallowcandles", "thaumcraft:hedge_leather",
             "thaumcraft:hedge_gunpowder","thaumcraft:hedge_slime","thaumcraft:hedge_dye","thaumcraft:hedge_glowstone",
             "thaumcraft:hedge_clay","thaumcraft:hedge_string","thaumcraft:hedge_web","thaumcraft:hedge_lava"]

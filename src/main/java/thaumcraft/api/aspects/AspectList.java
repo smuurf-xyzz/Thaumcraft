@@ -109,6 +109,12 @@ public class AspectList implements Serializable {
         return this;
     }
 
+    public AspectList remove(AspectList in) {
+        for (Aspect a : in.getAspects())
+            remove(a, in.getAmount(a));
+        return this;
+    }
+
     public AspectList merge(Aspect aspect, int amount) {
         if (aspects.containsKey(aspect)) {
             int oldamount = aspects.get(aspect);
