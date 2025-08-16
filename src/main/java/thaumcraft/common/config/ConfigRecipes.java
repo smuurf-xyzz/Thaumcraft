@@ -17,7 +17,6 @@ import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.ShapelessRecipe;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import thaumcraft.Thaumcraft;
@@ -72,6 +71,7 @@ public class ConfigRecipes extends RecipeProvider {
         CrucibleRecipeBuilder.smelting(new ItemStack(Items.CLAY_BALL, 1)).research("HEDGEALCHEMY@3").catalyst(Items.DIRT).aspects(new AspectList(new ItemStack(Items.CLAY_BALL)).remove(new AspectList(new ItemStack(Blocks.DIRT)))).save(pFinishedRecipeConsumer, "thaumcraft:hedge_clay");
         CrucibleRecipeBuilder.smelting(new ItemStack(Items.STRING, 1)).research("HEDGEALCHEMY@3").catalyst(Items.WHEAT).aspects(new AspectList(new ItemStack(Items.STRING)).remove(new AspectList(new ItemStack(Items.WHEAT)))).save(pFinishedRecipeConsumer, "thaumcraft:hedge_string");
         CrucibleRecipeBuilder.smelting(new ItemStack(Blocks.COBWEB, 1)).research("HEDGEALCHEMY@3").catalyst(Items.STRING).aspects(new AspectList(new ItemStack(Blocks.COBWEB)).remove(new AspectList(new ItemStack(Items.STRING)))).save(pFinishedRecipeConsumer, "thaumcraft:hedge_web");
+        CrucibleRecipeBuilder.smelting(new ItemStack(Items.LAVA_BUCKET, 1)).research("HEDGEALCHEMY@3").catalyst(Items.BUCKET).aspects(new AspectList().add(Aspect.FIRE, 15).add(Aspect.EARTH, 5)).save(pFinishedRecipeConsumer, "thaumcraft:hedge_lava");
         CrucibleRecipeBuilder.smelting(new ItemStack(ItemsTC.clusterIron)).research("METALPURIFICATION").catalyst(Tags.Items.RAW_MATERIALS_IRON).aspects(new AspectList().merge(Aspect.METAL, 5).merge(Aspect.ORDER, 5)).save(pFinishedRecipeConsumer, "thaumcraft:metal_purification_iron");
         CrucibleRecipeBuilder.smelting(new ItemStack(ItemsTC.clusterCopper)).research("METALPURIFICATION").catalyst(Tags.Items.RAW_MATERIALS_COPPER).aspects(new AspectList().merge(Aspect.METAL, 5).merge(Aspect.ORDER, 5)).save(pFinishedRecipeConsumer, "thaumcraft:metal_purification_copper");
         CrucibleRecipeBuilder.smelting(new ItemStack(ItemsTC.clusterGold)).research("METALPURIFICATION").catalyst(Tags.Items.RAW_MATERIALS_GOLD).aspects(new AspectList().merge(Aspect.METAL, 5).merge(Aspect.ORDER, 5)).save(pFinishedRecipeConsumer, "thaumcraft:metal_purification_gold");

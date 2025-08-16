@@ -1,4 +1,4 @@
-// 1.19.2	2025-08-16T15:28:52.1566341	Recipes
+// 1.19.2	2025-08-16T18:25:31.1694018	Recipes
 b8b82b4e524dee62a44a7012b1bc45c8f713c72d data/minecraft/advancements/recipes/thaumcraft/quicksilver_from_blasting_ore_cinnabar.json
 6ffadb7025b1cdca99823e536035ef6663d2fdee data/minecraft/advancements/recipes/thaumcraft/quicksilver_from_smelting_ore_cinnabar.json
 d86a94b481e672aac9107af8ff51299d7d170d6f data/minecraft/recipes/quicksilver_from_blasting_ore_cinnabar.json
@@ -12,6 +12,7 @@ c917034d38c06bdf7726d98b7646b25ed53eea2a data/thaumcraft/advancements/recipes/mi
 3fc6cfe765031c52496ecffc849b27cb139faf8b data/thaumcraft/advancements/recipes/misc/hedge_dye.json
 3fc6cfe765031c52496ecffc849b27cb139faf8b data/thaumcraft/advancements/recipes/misc/hedge_glowstone.json
 3fc6cfe765031c52496ecffc849b27cb139faf8b data/thaumcraft/advancements/recipes/misc/hedge_gunpowder.json
+3fc6cfe765031c52496ecffc849b27cb139faf8b data/thaumcraft/advancements/recipes/misc/hedge_lava.json
 3fc6cfe765031c52496ecffc849b27cb139faf8b data/thaumcraft/advancements/recipes/misc/hedge_leather.json
 3fc6cfe765031c52496ecffc849b27cb139faf8b data/thaumcraft/advancements/recipes/misc/hedge_slime.json
 3fc6cfe765031c52496ecffc849b27cb139faf8b data/thaumcraft/advancements/recipes/misc/hedge_string.json
@@ -136,6 +137,7 @@ def2190f74d234ffd15dc06346dbede840425b08 data/thaumcraft/recipes/gold_ingot_from
 d4533a1e7d1aa936da36883df595980d0fa006a7 data/thaumcraft/recipes/hedge_dye.json
 52f44576c0405c87eea604f36ed1b5510f7eb9b1 data/thaumcraft/recipes/hedge_glowstone.json
 6e3b7a9f895fc00b5e550612d43690ba0e0c1041 data/thaumcraft/recipes/hedge_gunpowder.json
+965d8b18e50d72ff0e5284a9e027add40a6f0937 data/thaumcraft/recipes/hedge_lava.json
 879351fe68a70b8243756f5fa24f78e82d9c1572 data/thaumcraft/recipes/hedge_leather.json
 0a74dbe58a5773070d0d16b50b87d96d3b589121 data/thaumcraft/recipes/hedge_slime.json
 109144382481cf4cbeb047da69c079a34d73cd5c data/thaumcraft/recipes/hedge_string.json
