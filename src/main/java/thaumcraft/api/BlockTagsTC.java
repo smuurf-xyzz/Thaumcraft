@@ -14,6 +14,7 @@ import thaumcraft.api.blocks.BlocksTC;
 public class BlockTagsTC extends BlockTagsProvider {
     public static final TagKey<Block> SILVERWOOD_LOGS = BlockTags.create(new ResourceLocation("thaumcraft", "silverwood_logs"));
     public static final TagKey<Block> NITOR = BlockTags.create(new ResourceLocation("thaumcraft", "nitor"));
+    public static final TagKey<Block> CANDLES = BlockTags.create(new ResourceLocation("thaumcraft", "candles"));
 
     public BlockTagsTC(DataGenerator generator, String modId, @Nullable ExistingFileHelper existingFileHelper) {
         super(generator, modId, existingFileHelper);
@@ -29,6 +30,11 @@ public class BlockTagsTC extends BlockTagsProvider {
         var tag = tag(NITOR);
         for (DyeColor dye : DyeColor.values()) {
             tag.add(BlocksTC.nitor.get(dye));
+        }
+
+        tag = tag(CANDLES);
+        for (DyeColor dye : DyeColor.values()) {
+            tag.add(BlocksTC.candles.get(dye));
         }
     }
 }

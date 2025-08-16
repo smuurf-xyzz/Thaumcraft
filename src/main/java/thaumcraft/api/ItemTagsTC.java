@@ -14,6 +14,7 @@ import thaumcraft.api.items.ItemsTC;
 public class ItemTagsTC extends ItemTagsProvider {
     public static final TagKey<Item> SILVERWOOD_LOGS = ItemTags.create(new ResourceLocation("thaumcraft", "silverwood_logs"));
     public static final TagKey<Item> NITOR = ItemTags.create(new ResourceLocation("thaumcraft", "nitor"));
+    public static final TagKey<Item> CANDLES = ItemTags.create(new ResourceLocation("thaumcraft", "candles"));
     public static final TagKey<Item> INGOTS_BRASS = ItemTags.create(new ResourceLocation("thaumcraft", "ingots/brass"));
 
     public ItemTagsTC(DataGenerator generator, BlockTagsProvider blockTagsProvider, String modId, @Nullable ExistingFileHelper existingFileHelper) {
@@ -24,6 +25,7 @@ public class ItemTagsTC extends ItemTagsProvider {
     protected void addTags() {
         this.copy(BlockTagsTC.SILVERWOOD_LOGS, ItemTagsTC.SILVERWOOD_LOGS);
         this.copy(BlockTagsTC.NITOR, ItemTagsTC.NITOR);
+        this.copy(BlockTagsTC.CANDLES, ItemTagsTC.CANDLES);
         this.tag(INGOTS_BRASS).add(ItemsTC.brassIngot);
     }
 }
