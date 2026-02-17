@@ -50,26 +50,30 @@ public class BlockSaplingTC extends BushBlock implements BonemealableBlock {
     }
 
     public void generateTree(ServerLevel pLevel, BlockPos pPos, BlockState pState, RandomSource pRandom) {
-        if (pState.getBlock() == BlocksTC.saplingSilverwood) {
+        ConfiguredFeature<?, ?> configuredFeature = null;
+
+        if (pState.getBlock() == BlocksTC.saplingGreatwood) {
+            var event = ForgeEventFactory.blockGrowFeature(pLevel, pRandom, pPos, ThaumcraftWorldGenerator.GREATWOOD_FEATURE.getHolder().get());
+            if (event.getResult().equals(net.minecraftforge.eventbus.api.Event.Result.DENY)) {
+                return;
+            }
+            configuredFeature = event.getFeature().value();
+        } else if (pState.getBlock() == BlocksTC.saplingSilverwood) {
             var event = ForgeEventFactory.blockGrowFeature(pLevel, pRandom, pPos, ThaumcraftWorldGenerator.SILVERWOOD_FEATURE.getHolder().get());
             if (event.getResult().equals(net.minecraftforge.eventbus.api.Event.Result.DENY)) {
                 return;
             }
-            ConfiguredFeature<?, ?> configuredfeature = event.getFeature().value();
-
-            pLevel.setBlock(pPos, Blocks.AIR.defaultBlockState(), 4);
-
-            if (configuredfeature.place(pLevel, pLevel.getChunkSource().getGenerator(), pRandom, pPos)) {
-                return;
-//                pLevel.setBlock(pPos, Blocks.AIR.defaultBlockState(), 4);
-            }
+            configuredFeature = event.getFeature().value();
         }
-//        Object object = null;
-//        if(pState.getBlock() == BlocksTC.saplingSilverwood) {
-////            object =
-//        }
-//        var test = new SilverwoodTreeFeature();
-//        test.place(new FeaturePlaceContext<>())
+
+        if (configuredFeature == null) {
+            return;
+        }
+
+        pLevel.setBlock(pPos, Blocks.AIR.defaultBlockState(), 4);
+        if (!configuredFeature.place(pLevel, pLevel.getChunkSource().getGenerator(), pRandom, pPos)) {
+            pLevel.setBlock(pPos, pState, 4);
+        }
     }
 
     @Override

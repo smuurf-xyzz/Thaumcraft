@@ -1,7 +1,8 @@
-// 1.19.2	2025-08-16T03:45:44.3022477	Tags for minecraft:block
+// 1.19.2	2026-02-17T21:31:31.100284	Tags for minecraft:block
 c02b89c6ef3e4bf2c8e00777aa28d970b2d9a2d4 data/minecraft/tags/blocks/beacon_base_blocks.json
-db30dcff747660332958a0ed57a40bf8baa634a0 data/minecraft/tags/blocks/leaves.json
-bac95cfb2bdf3e31d20f9f839aa69ac971f393c8 data/minecraft/tags/blocks/logs.json
+d9836a3a73754b19021cb7b5eeb2398a08a36145 data/minecraft/tags/blocks/leaves.json
+d1dba72dabd9e4eb834eed99468193ae3b181e1c data/minecraft/tags/blocks/logs.json
 a4afa93d08ea41c3246bc3492a83e768c4d43f4e data/thaumcraft/tags/blocks/candles.json
+fc1278ee1bc0982f9065ca14fa744f9da6cd428f data/thaumcraft/tags/blocks/greatwood_logs.json
 0feaa009d1d8981cc63037ded75c4a9005866584 data/thaumcraft/tags/blocks/nitor.json
 bac95cfb2bdf3e31d20f9f839aa69ac971f393c8 data/thaumcraft/tags/blocks/silverwood_logs.json

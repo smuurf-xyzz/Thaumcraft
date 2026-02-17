@@ -54,6 +54,10 @@ public class ConfigBlocks {
         BlocksTC.logSilverwood = registerBlock("log_silverwood", new BlockLogsTC(BlockBehaviour.Properties.of(Material.WOOD).requiresCorrectToolForDrops().lightLevel((pBlockState) -> 5).strength(2.0f, 5.0f).sound(SoundType.WOOD)));
         BlocksTC.leafSilverwood = registerBlock("leaves_silverwood", new BlockLeavesTC(BlockBehaviour.Properties.of(Material.LEAVES).noOcclusion().sound(SoundType.GRASS)));
         BlocksTC.plankSilverwood = registerBlock("plank_silverwood", new BlockPlanksTC(BlockBehaviour.Properties.of(Material.WOOD).requiresCorrectToolForDrops().strength(2.0f).sound(SoundType.WOOD)));
+        BlocksTC.saplingGreatwood = registerBlock("sapling_greatwood", new BlockSaplingTC(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
+        BlocksTC.logGreatwood = registerBlock("log_greatwood", new BlockLogsTC(BlockBehaviour.Properties.of(Material.WOOD).requiresCorrectToolForDrops().lightLevel((pBlockState) -> 5).strength(2.0f, 5.0f).sound(SoundType.WOOD)));
+        BlocksTC.leafGreatwood = registerBlock("leaves_greatwood", new BlockLeavesTC(BlockBehaviour.Properties.of(Material.LEAVES).noOcclusion().sound(SoundType.GRASS)));
+        BlocksTC.plankGreatwood = registerBlock("plank_greatwood", new BlockPlanksTC(BlockBehaviour.Properties.of(Material.WOOD).requiresCorrectToolForDrops().strength(2.0f).sound(SoundType.WOOD)));
         BlocksTC.tableWood = registerBlock("table_wood", new BlockTable(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).destroyTime(2.0f)));
         BlocksTC.metalBlockBrass = registerBlock("metal_brass", new BlockMetalTC(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).requiresCorrectToolForDrops().strength(4.0f, 10.0f)));
         BlocksTC.metalBlockThaumium = registerBlock("metal_thaumium", new BlockMetalTC(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).requiresCorrectToolForDrops().strength(4.0f, 10.0f)));

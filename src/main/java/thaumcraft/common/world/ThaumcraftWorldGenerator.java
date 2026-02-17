@@ -16,6 +16,7 @@ import net.minecraftforge.registries.RegistryObject;
 import thaumcraft.Thaumcraft;
 import thaumcraft.api.blocks.BlocksTC;
 import thaumcraft.common.world.objects.CrystalFeature;
+import thaumcraft.common.world.objects.GreatwoodTreeFeature;
 import thaumcraft.common.world.objects.SilverwoodTreeFeature;
 
 import java.util.List;
@@ -38,9 +39,13 @@ public class ThaumcraftWorldGenerator {
 
     public static final RegistryObject<Feature<NoneFeatureConfiguration>> SILVERWOOD = FEATURES.register("silverwood",
             () -> new SilverwoodTreeFeature(NoneFeatureConfiguration.CODEC, 7, 4));
-
     public static final RegistryObject<ConfiguredFeature<?, ?>> SILVERWOOD_FEATURE = CONFIGURED_FEATURES.register("silverwood_feature",
             () -> new ConfiguredFeature<>(ThaumcraftWorldGenerator.SILVERWOOD.get(), NoneFeatureConfiguration.INSTANCE));
+
+    public static final RegistryObject<Feature<NoneFeatureConfiguration>> GREATWOOD = FEATURES.register("greatwood",
+            () -> new GreatwoodTreeFeature(NoneFeatureConfiguration.CODEC, false));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> GREATWOOD_FEATURE = CONFIGURED_FEATURES.register("greatwood_feature",
+            () -> new ConfiguredFeature<>(ThaumcraftWorldGenerator.GREATWOOD.get(), NoneFeatureConfiguration.INSTANCE));
 
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_CINNABAR_ORES = Suppliers.memoize(() -> List.of(
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlocksTC.oreCinnabar.defaultBlockState())));

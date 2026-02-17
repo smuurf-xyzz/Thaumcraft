@@ -11,6 +11,10 @@ public class BlocksTC {
     public static Block leafSilverwood;
     public static Block saplingSilverwood;
     public static Block plankSilverwood;
+    public static Block logGreatwood;
+    public static Block leafGreatwood;
+    public static Block saplingGreatwood;
+    public static Block plankGreatwood;
     public static Block stoneArcane;
     public static Block stoneArcaneBrick;
     public static Block crystalAir;

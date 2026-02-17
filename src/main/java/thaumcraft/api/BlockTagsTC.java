@@ -13,6 +13,7 @@ import thaumcraft.api.blocks.BlocksTC;
 
 public class BlockTagsTC extends BlockTagsProvider {
     public static final TagKey<Block> SILVERWOOD_LOGS = BlockTags.create(new ResourceLocation("thaumcraft", "silverwood_logs"));
+    public static final TagKey<Block> GREATWOOD_LOGS = BlockTags.create(new ResourceLocation("thaumcraft", "greatwood_logs"));
     public static final TagKey<Block> NITOR = BlockTags.create(new ResourceLocation("thaumcraft", "nitor"));
     public static final TagKey<Block> CANDLES = BlockTags.create(new ResourceLocation("thaumcraft", "candles"));
 
@@ -23,8 +24,11 @@ public class BlockTagsTC extends BlockTagsProvider {
     @Override
     protected void addTags() {
         tag(SILVERWOOD_LOGS).add(BlocksTC.logSilverwood);
+        tag(GREATWOOD_LOGS).add(BlocksTC.logGreatwood);
         tag(BlockTags.LOGS).add(BlocksTC.logSilverwood);
+        tag(BlockTags.LOGS).add(BlocksTC.logGreatwood);
         tag(BlockTags.LEAVES).add(BlocksTC.leafSilverwood);
+        tag(BlockTags.LEAVES).add(BlocksTC.leafGreatwood);
         tag(BlockTags.BEACON_BASE_BLOCKS).add(BlocksTC.metalBlockBrass).add(BlocksTC.metalBlockThaumium);
 
         var tag = tag(NITOR);
