@@ -46,6 +46,20 @@ public class FXDispatcher {
         ParticleEngine.addEffectWithDelay(getWorld(), fb, delay);
     }
 
+    public void drawLevitatorParticles(final double x, final double y, final double z, final double x2, final double y2, final double z2) {
+        final FXGeneric fb = new FXGeneric(this.getWorld(), x, y, z, x2, y2, z2);
+        fb.setMaxAge(200 + this.getWorld().random.nextInt(100));
+        fb.setRBGColorF(0.5f, 0.5f, 0.2f);
+        fb.setAlphaF(0.3f, 0.0f);
+        fb.setGridSize(16);
+        fb.setParticles(56, 1, 1);
+        fb.setScale(2.0f, 5.0f);
+        fb.setLayer(ParticleRenderType.PARTICLE_SHEET_TRANSLUCENT);
+        fb.setSlowDown(1.0f);
+        fb.setRotationSpeed(this.getWorld().random.nextFloat(), this.getWorld().random.nextBoolean() ? -1.0f : 1.0f);
+        ParticleEngine.addEffect(this.getWorld(), fb);
+    }
+
     public void drawPollutionParticles(BlockPos p) {
         float x = p.getX() + 0.2f + getWorld().random.nextFloat() * 0.6f;
         float y = p.getY() + 0.2f + getWorld().random.nextFloat() * 0.6f;
