@@ -17,12 +17,15 @@ import thaumcraft.common.blockentities.crafting.BlockEntityArcaneWorkbench;
 import thaumcraft.common.blockentities.crafting.BlockEntityCrucible;
 import thaumcraft.common.blockentities.crafting.BlockEntityResearchTable;
 import thaumcraft.common.blockentities.devices.BlockEntityLevitator;
+import thaumcraft.common.blockentities.misc.BlockEntityBarrierStone;
 import thaumcraft.common.blockentities.misc.BlockEntityNitor;
 import thaumcraft.common.blocks.basic.*;
 import thaumcraft.common.blocks.crafting.BlockArcaneWorkbench;
 import thaumcraft.common.blocks.crafting.BlockCrucible;
 import thaumcraft.common.blocks.crafting.BlockResearchTable;
 import thaumcraft.common.blocks.devices.BlockLevitator;
+import thaumcraft.common.blocks.misc.BlockBarrier;
+import thaumcraft.common.blocks.misc.BlockFlesh;
 import thaumcraft.common.blocks.misc.BlockNitor;
 import thaumcraft.common.blocks.world.ore.BlockCrystal;
 import thaumcraft.common.blocks.world.ore.ShardType;
@@ -50,6 +53,7 @@ public class ConfigBlocks {
         ShardType.ENTROPY.setOre(BlocksTC.crystalEntropy);
         ShardType.FLUX.setOre(BlocksTC.crystalTaint);
 
+        BlocksTC.fleshBlock = registerBlock("flesh_block", new BlockFlesh());
         BlocksTC.stoneArcane = registerBlock("stone_arcane", new BlockStoneTC());
         BlocksTC.stoneArcaneBrick = registerBlock("stone_arcane_brick", new BlockStoneTC());
         BlocksTC.saplingSilverwood = registerBlock("sapling_silverwood", new BlockSaplingTC(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
@@ -64,6 +68,8 @@ public class ConfigBlocks {
         BlocksTC.metalBlockBrass = registerBlock("metal_brass", new BlockMetalTC(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).requiresCorrectToolForDrops().strength(4.0f, 10.0f)));
         BlocksTC.metalBlockThaumium = registerBlock("metal_thaumium", new BlockMetalTC(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).requiresCorrectToolForDrops().strength(4.0f, 10.0f)));
         BlocksTC.levitator = registerBlock("levitator", new BlockLevitator());
+        BlocksTC.pavingStoneTravel = registerBlock("paving_stone_travel", new BlockPavingStoneTravel());
+        BlocksTC.pavingStoneBarrier = registerBlock("paving_stone_barrier", new BlockPavingStoneBarrier());
         for (DyeColor dye : DyeColor.values()) {
             BlocksTC.candles.put(dye, registerBlock("candle_" + dye.getName().toLowerCase(), new BlockCandle(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.1f).sound(SoundType.WOOL).lightLevel((pBlockState) -> 14).noCollission().color(dye.getMaterialColor()), dye)));
         }
@@ -73,11 +79,13 @@ public class ConfigBlocks {
         BlocksTC.arcaneWorkbench = registerBlock("arcane_workbench", new BlockArcaneWorkbench());
         BlocksTC.researchTable = registerBlock("research_table", new BlockResearchTable(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).noOcclusion()));
         BlocksTC.crucible = registerBlock("crucible", new BlockCrucible(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).noOcclusion()));
+        BlocksTC.barrier = registerBlock("barrier", new BlockBarrier());
     }
 
     public static void initBlockEntities() {
         ForgeRegistries.BLOCK_ENTITY_TYPES.register("arcane_workbench", BlockEntityType.Builder.of(BlockEntityArcaneWorkbench::new, BlocksTC.arcaneWorkbench).build(null));
         ForgeRegistries.BLOCK_ENTITY_TYPES.register("crucible", BlockEntityType.Builder.of(BlockEntityCrucible::new, BlocksTC.crucible).build(null));
+        ForgeRegistries.BLOCK_ENTITY_TYPES.register("barrier_stone", BlockEntityType.Builder.of(BlockEntityBarrierStone::new, BlocksTC.pavingStoneBarrier).build(null));
         ForgeRegistries.BLOCK_ENTITY_TYPES.register("nitor", BlockEntityType.Builder.of(BlockEntityNitor::new, BlocksTC.nitor.values().toArray(new Block[0])).build(null));
         ForgeRegistries.BLOCK_ENTITY_TYPES.register("research_table", BlockEntityType.Builder.of(BlockEntityResearchTable::new, BlocksTC.researchTable).build(null));
         ForgeRegistries.BLOCK_ENTITY_TYPES.register("levitator", BlockEntityType.Builder.of(BlockEntityLevitator::new, BlocksTC.levitator).build(null));

@@ -16,6 +16,7 @@ public class BlocksTC {
     public static Block saplingGreatwood;
     public static Block plankGreatwood;
     public static Block stoneArcane;
+    public static Block fleshBlock;
     public static Block stoneArcaneBrick;
     public static Block crystalAir;
     public static Block crystalFire;
@@ -28,6 +29,9 @@ public class BlocksTC {
     public static Block metalBlockThaumium;
     public static Block metalBlockBrass;
     public static Block levitator;
+    public static Block pavingStoneTravel;
+    public static Block pavingStoneBarrier;
+    public static Block barrier;
 
     public static HashMap<DyeColor,Block> candles = new HashMap<>();
     public static HashMap<DyeColor, Block> nitor = new HashMap<>();

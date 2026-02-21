@@ -7,6 +7,7 @@ import net.minecraftforge.registries.RegisterEvent;
 
 public class SoundsTC {
     public static SoundEvent key;
+    public static SoundEvent gore;
     public static SoundEvent spill;
     public static SoundEvent bubble;
     public static SoundEvent clack;
@@ -17,14 +18,17 @@ public class SoundsTC {
     public static SoundEvent crystal;
     public static SoundEvent scan;
     public static SoundEvent dust;
+    public static SoundType GORE;
     public static SoundType CRYSTAL;
 
     public static void registerSoundTypes() {
+        SoundsTC.GORE = new SoundType(0.5f, 1.0f, SoundsTC.gore, SoundsTC.gore, SoundsTC.gore, SoundsTC.gore, SoundsTC.gore);
         SoundsTC.CRYSTAL = new SoundType(0.5f, 1.0f, SoundsTC.crystal, SoundsTC.crystal, SoundsTC.crystal, SoundsTC.crystal, SoundsTC.crystal);
     }
 
     public static void registerSounds(RegisterEvent.RegisterHelper<SoundEvent> event) {
         SoundsTC.key = getRegisteredSoundEvent(event, "thaumcraft:key");
+        SoundsTC.gore = getRegisteredSoundEvent(event, "thaumcraft:gore");
         SoundsTC.spill = getRegisteredSoundEvent(event, "thaumcraft:spill");
         SoundsTC.bubble = getRegisteredSoundEvent(event, "thaumcraft:bubble");
         SoundsTC.clack = getRegisteredSoundEvent(event, "thaumcraft:clack");
