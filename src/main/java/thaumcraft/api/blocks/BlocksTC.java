@@ -32,6 +32,9 @@ public class BlocksTC {
     public static Block pavingStoneTravel;
     public static Block pavingStoneBarrier;
     public static Block barrier;
+    public static Block shimmerleaf;
+    public static Block cinderpearl;
+    public static Block vishroom;
 
     public static HashMap<DyeColor,Block> candles = new HashMap<>();
     public static HashMap<DyeColor, Block> nitor = new HashMap<>();

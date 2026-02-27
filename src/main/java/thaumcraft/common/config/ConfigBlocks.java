@@ -29,9 +29,7 @@ import thaumcraft.common.blocks.misc.BlockFlesh;
 import thaumcraft.common.blocks.misc.BlockNitor;
 import thaumcraft.common.blocks.world.ore.BlockCrystal;
 import thaumcraft.common.blocks.world.ore.ShardType;
-import thaumcraft.common.blocks.world.plants.BlockLeavesTC;
-import thaumcraft.common.blocks.world.plants.BlockLogsTC;
-import thaumcraft.common.blocks.world.plants.BlockSaplingTC;
+import thaumcraft.common.blocks.world.plants.*;
 
 public class ConfigBlocks {
     public static void initBlocks(RegisterEvent.RegisterHelper<Block> event) {
@@ -80,6 +78,9 @@ public class ConfigBlocks {
         BlocksTC.researchTable = registerBlock("research_table", new BlockResearchTable(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).noOcclusion()));
         BlocksTC.crucible = registerBlock("crucible", new BlockCrucible(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).noOcclusion()));
         BlocksTC.barrier = registerBlock("barrier", new BlockBarrier());
+        BlocksTC.shimmerleaf = registerBlock("shimmerleaf", new BlockPlantShimmerleaf());
+        BlocksTC.vishroom = registerBlock("vishroom", new BlockPlantVishroom());
+        BlocksTC.cinderpearl = registerBlock("cinderpearl", new BlockPlantCinderpearl());
     }
 
     public static void initBlockEntities() {
