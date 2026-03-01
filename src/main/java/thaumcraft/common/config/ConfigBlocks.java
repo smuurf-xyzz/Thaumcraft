@@ -68,25 +68,37 @@ public class ConfigBlocks {
         BlocksTC.metalBlockThaumium = registerBlock("metal_thaumium", new BlockMetalTC(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).requiresCorrectToolForDrops().strength(4.0f, 10.0f)));
         BlocksTC.levitator = registerBlock("levitator", new BlockLevitator());
 
-        /* stairs; @todo: wood stairs */
+        /* stairs */
         BlocksTC.stairsArcane = registerBlock("stairs_arcane", new BlockStairsTC(() -> BlocksTC.stoneArcane.defaultBlockState(), BlockBehaviour.Properties.copy(BlocksTC.stoneArcane)));
         BlocksTC.stairsArcaneBrick = registerBlock("stairs_arcane_brick", new BlockStairsTC(() -> BlocksTC.stoneArcaneBrick.defaultBlockState(), BlockBehaviour.Properties.copy(BlocksTC.stoneArcaneBrick)));
         BlocksTC.stairsAncient = registerBlock("stairs_ancient", new BlockStairsTC(() -> BlocksTC.stoneAncient.defaultBlockState(), BlockBehaviour.Properties.copy(BlocksTC.stoneAncient)));
         BlocksTC.stairsGreatwood = registerBlock("stairs_greatwood", new BlockStairsTC(() -> BlocksTC.plankGreatwood.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)));
         BlocksTC.stairsSilverwood = registerBlock("stairs_silverwood", new BlockStairsTC(() -> BlocksTC.plankSilverwood.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)));
 
+        /* slabs */
+        BlocksTC.slabArcane = registerBlock("slab_arcane", new BlockSlabTC(false));
+        BlocksTC.slabArcaneBrick = registerBlock("slab_arcane_brick", new BlockSlabTC(false));
+        BlocksTC.slabAncient = registerBlock("slab_ancient", new BlockSlabTC(false));
+        BlocksTC.slabGreatwood = registerBlock("slab_greatwood", new BlockSlabTC(true));
+        BlocksTC.slabSilverwood = registerBlock("slab_silverwood", new BlockSlabTC(true));
+
         BlocksTC.pavingStoneTravel = registerBlock("paving_stone_travel", new BlockPavingStoneTravel());
         BlocksTC.pavingStoneBarrier = registerBlock("paving_stone_barrier", new BlockPavingStoneBarrier());
+
         for (DyeColor dye : DyeColor.values()) {
             BlocksTC.candles.put(dye, registerBlock("candle_" + dye.getName().toLowerCase(), new BlockCandle(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.1f).sound(SoundType.WOOL).lightLevel((pBlockState) -> 14).noCollission().color(dye.getMaterialColor()), dye)));
         }
         for (DyeColor dye : DyeColor.values()) {
             BlocksTC.nitor.put(dye, registerBlock("nitor_" + dye.getName().toLowerCase(), new BlockNitor(BlockBehaviour.Properties.of(Material.DECORATION).strength(0.1f).sound(SoundType.WOOL).lightLevel((pBlockState) -> 15).noCollission().color(dye.getMaterialColor()), dye)));
         }
+
         BlocksTC.arcaneWorkbench = registerBlock("arcane_workbench", new BlockArcaneWorkbench());
         BlocksTC.researchTable = registerBlock("research_table", new BlockResearchTable(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).noOcclusion()));
         BlocksTC.crucible = registerBlock("crucible", new BlockCrucible(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).noOcclusion()));
+
         BlocksTC.barrier = registerBlock("barrier", new BlockBarrier());
+
+        /* plants */
         BlocksTC.shimmerleaf = registerBlock("shimmerleaf", new BlockPlantShimmerleaf());
         BlocksTC.vishroom = registerBlock("vishroom", new BlockPlantVishroom());
         BlocksTC.cinderpearl = registerBlock("cinderpearl", new BlockPlantCinderpearl());

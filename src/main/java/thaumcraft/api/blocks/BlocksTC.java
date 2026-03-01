@@ -30,9 +30,17 @@ public class BlocksTC {
     public static Block metalBlockThaumium;
     public static Block metalBlockBrass;
     public static Block levitator;
+
+    /* stairs */
     public static Block stairsArcane, stairsArcaneBrick,
                         stairsAncient, stairsGreatwood,
                         stairsSilverwood;
+
+    /* slabs */
+    public static Block slabArcane, slabArcaneBrick,
+                        slabAncient, slabGreatwood,
+                        slabSilverwood;
+
     public static Block pavingStoneTravel;
     public static Block pavingStoneBarrier;
     public static Block barrier;
