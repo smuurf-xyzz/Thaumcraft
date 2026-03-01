@@ -15,6 +15,7 @@ public class BlocksTC {
     public static Block leafGreatwood;
     public static Block saplingGreatwood;
     public static Block plankGreatwood;
+    public static Block stoneAncient;
     public static Block stoneArcane;
     public static Block fleshBlock;
     public static Block stoneArcaneBrick;
@@ -29,6 +30,9 @@ public class BlocksTC {
     public static Block metalBlockThaumium;
     public static Block metalBlockBrass;
     public static Block levitator;
+    public static Block stairsArcane, stairsArcaneBrick,
+                        stairsAncient, stairsGreatwood,
+                        stairsSilverwood;
     public static Block pavingStoneTravel;
     public static Block pavingStoneBarrier;
     public static Block barrier;

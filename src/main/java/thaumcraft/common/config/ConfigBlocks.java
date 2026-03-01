@@ -52,6 +52,7 @@ public class ConfigBlocks {
         ShardType.FLUX.setOre(BlocksTC.crystalTaint);
 
         BlocksTC.fleshBlock = registerBlock("flesh_block", new BlockFlesh());
+        BlocksTC.stoneAncient = registerBlock("stone_ancient", new BlockStoneTC());
         BlocksTC.stoneArcane = registerBlock("stone_arcane", new BlockStoneTC());
         BlocksTC.stoneArcaneBrick = registerBlock("stone_arcane_brick", new BlockStoneTC());
         BlocksTC.saplingSilverwood = registerBlock("sapling_silverwood", new BlockSaplingTC(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
@@ -66,6 +67,14 @@ public class ConfigBlocks {
         BlocksTC.metalBlockBrass = registerBlock("metal_brass", new BlockMetalTC(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).requiresCorrectToolForDrops().strength(4.0f, 10.0f)));
         BlocksTC.metalBlockThaumium = registerBlock("metal_thaumium", new BlockMetalTC(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).requiresCorrectToolForDrops().strength(4.0f, 10.0f)));
         BlocksTC.levitator = registerBlock("levitator", new BlockLevitator());
+
+        /* stairs; @todo: wood stairs */
+        BlocksTC.stairsArcane = registerBlock("stairs_arcane", new BlockStairsTC(() -> BlocksTC.stoneArcane.defaultBlockState(), BlockBehaviour.Properties.copy(BlocksTC.stoneArcane)));
+        BlocksTC.stairsArcaneBrick = registerBlock("stairs_arcane_brick", new BlockStairsTC(() -> BlocksTC.stoneArcaneBrick.defaultBlockState(), BlockBehaviour.Properties.copy(BlocksTC.stoneArcaneBrick)));
+        BlocksTC.stairsAncient = registerBlock("stairs_ancient", new BlockStairsTC(() -> BlocksTC.stoneAncient.defaultBlockState(), BlockBehaviour.Properties.copy(BlocksTC.stoneAncient)));
+        BlocksTC.stairsGreatwood = registerBlock("stairs_greatwood", new BlockStairsTC(() -> BlocksTC.plankGreatwood.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)));
+        BlocksTC.stairsSilverwood = registerBlock("stairs_silverwood", new BlockStairsTC(() -> BlocksTC.plankSilverwood.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)));
+
         BlocksTC.pavingStoneTravel = registerBlock("paving_stone_travel", new BlockPavingStoneTravel());
         BlocksTC.pavingStoneBarrier = registerBlock("paving_stone_barrier", new BlockPavingStoneBarrier());
         for (DyeColor dye : DyeColor.values()) {
