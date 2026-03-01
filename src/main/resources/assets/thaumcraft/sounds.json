@@ -26,6 +26,22 @@
       "thaumcraft:bubble4"
     ]
   },
+  "key": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "thaumcraft:key",
+        "stream": false
+      }
+    ]
+  },
+  "gore": {
+    "category": "block",
+    "sounds": [
+      "thaumcraft:gore1",
+      "thaumcraft:gore2"
+    ]
+  },
   "crystal": {
     "category": "block",
     "sounds": [

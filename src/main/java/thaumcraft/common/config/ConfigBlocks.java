@@ -52,35 +52,41 @@ public class ConfigBlocks {
         ShardType.FLUX.setOre(BlocksTC.crystalTaint);
 
         BlocksTC.fleshBlock = registerBlock("flesh_block", new BlockFlesh());
-        BlocksTC.stoneAncient = registerBlock("stone_ancient", new BlockStoneTC());
-        BlocksTC.stoneArcane = registerBlock("stone_arcane", new BlockStoneTC());
-        BlocksTC.stoneArcaneBrick = registerBlock("stone_arcane_brick", new BlockStoneTC());
-        BlocksTC.saplingSilverwood = registerBlock("sapling_silverwood", new BlockSaplingTC(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
-        BlocksTC.logSilverwood = registerBlock("log_silverwood", new BlockLogsTC(BlockBehaviour.Properties.of(Material.WOOD).requiresCorrectToolForDrops().lightLevel((pBlockState) -> 5).strength(2.0f, 5.0f).sound(SoundType.WOOD)));
-        BlocksTC.leafSilverwood = registerBlock("leaves_silverwood", new BlockLeavesTC(BlockBehaviour.Properties.of(Material.LEAVES).noOcclusion().sound(SoundType.GRASS)));
-        BlocksTC.plankSilverwood = registerBlock("plank_silverwood", new BlockPlanksTC(BlockBehaviour.Properties.of(Material.WOOD).requiresCorrectToolForDrops().strength(2.0f).sound(SoundType.WOOD)));
-        BlocksTC.saplingGreatwood = registerBlock("sapling_greatwood", new BlockSaplingTC(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
-        BlocksTC.logGreatwood = registerBlock("log_greatwood", new BlockLogsTC(BlockBehaviour.Properties.of(Material.WOOD).requiresCorrectToolForDrops().lightLevel((pBlockState) -> 5).strength(2.0f, 5.0f).sound(SoundType.WOOD)));
-        BlocksTC.leafGreatwood = registerBlock("leaves_greatwood", new BlockLeavesTC(BlockBehaviour.Properties.of(Material.LEAVES).noOcclusion().sound(SoundType.GRASS)));
-        BlocksTC.plankGreatwood = registerBlock("plank_greatwood", new BlockPlanksTC(BlockBehaviour.Properties.of(Material.WOOD).requiresCorrectToolForDrops().strength(2.0f).sound(SoundType.WOOD)));
         BlocksTC.tableWood = registerBlock("table_wood", new BlockTable(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).destroyTime(2.0f)));
-        BlocksTC.metalBlockBrass = registerBlock("metal_brass", new BlockMetalTC(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).requiresCorrectToolForDrops().strength(4.0f, 10.0f)));
-        BlocksTC.metalBlockThaumium = registerBlock("metal_thaumium", new BlockMetalTC(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).requiresCorrectToolForDrops().strength(4.0f, 10.0f)));
         BlocksTC.levitator = registerBlock("levitator", new BlockLevitator());
 
+        BlocksTC.metalBlockBrass = registerBlock("metal_brass", new BlockMetalTC(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).requiresCorrectToolForDrops().strength(4.0f, 10.0f)));
+        BlocksTC.metalBlockThaumium = registerBlock("metal_thaumium", new BlockMetalTC(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).requiresCorrectToolForDrops().strength(4.0f, 10.0f)));
+
+        BlocksTC.saplingGreatwood = registerBlock("greatwood_sapling", new BlockSaplingTC(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
+        BlocksTC.saplingSilverwood = registerBlock("silverwood_sapling", new BlockSaplingTC(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS)));
+
+        BlocksTC.logGreatwood = registerBlock("greatwood_log", new BlockLogsTC(BlockBehaviour.Properties.of(Material.WOOD).requiresCorrectToolForDrops().lightLevel((pBlockState) -> 5).strength(2.0f, 5.0f).sound(SoundType.WOOD)));
+        BlocksTC.logSilverwood = registerBlock("silverwood_log", new BlockLogsTC(BlockBehaviour.Properties.of(Material.WOOD).requiresCorrectToolForDrops().lightLevel((pBlockState) -> 5).strength(2.0f, 5.0f).sound(SoundType.WOOD)));
+
+        BlocksTC.leafGreatwood = registerBlock("greatwood_leaves", new BlockLeavesTC(BlockBehaviour.Properties.of(Material.LEAVES).noOcclusion().sound(SoundType.GRASS)));
+        BlocksTC.leafSilverwood = registerBlock("silverwood_leaves", new BlockLeavesTC(BlockBehaviour.Properties.of(Material.LEAVES).noOcclusion().sound(SoundType.GRASS)));
+
+        BlocksTC.plankGreatwood = registerBlock("greatwood_plank", new BlockPlanksTC(BlockBehaviour.Properties.of(Material.WOOD).requiresCorrectToolForDrops().strength(2.0f).sound(SoundType.WOOD)));
+        BlocksTC.plankSilverwood = registerBlock("silverwood_plank", new BlockPlanksTC(BlockBehaviour.Properties.of(Material.WOOD).requiresCorrectToolForDrops().strength(2.0f).sound(SoundType.WOOD)));
+
+        BlocksTC.stoneAncient = registerBlock("ancient_stone", new BlockStoneTC());
+        BlocksTC.stoneArcane = registerBlock("arcane_stone", new BlockStoneTC());
+        BlocksTC.stoneArcaneBrick = registerBlock("arcane_brick_stone", new BlockStoneTC());
+
         /* stairs */
-        BlocksTC.stairsArcane = registerBlock("stairs_arcane", new BlockStairsTC(() -> BlocksTC.stoneArcane.defaultBlockState(), BlockBehaviour.Properties.copy(BlocksTC.stoneArcane)));
-        BlocksTC.stairsArcaneBrick = registerBlock("stairs_arcane_brick", new BlockStairsTC(() -> BlocksTC.stoneArcaneBrick.defaultBlockState(), BlockBehaviour.Properties.copy(BlocksTC.stoneArcaneBrick)));
-        BlocksTC.stairsAncient = registerBlock("stairs_ancient", new BlockStairsTC(() -> BlocksTC.stoneAncient.defaultBlockState(), BlockBehaviour.Properties.copy(BlocksTC.stoneAncient)));
-        BlocksTC.stairsGreatwood = registerBlock("stairs_greatwood", new BlockStairsTC(() -> BlocksTC.plankGreatwood.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)));
-        BlocksTC.stairsSilverwood = registerBlock("stairs_silverwood", new BlockStairsTC(() -> BlocksTC.plankSilverwood.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)));
+        BlocksTC.stairsArcane = registerBlock("arcane_stairs", new BlockStairsTC(() -> BlocksTC.stoneArcane.defaultBlockState(), BlockBehaviour.Properties.copy(BlocksTC.stoneArcane)));
+        BlocksTC.stairsArcaneBrick = registerBlock("arcane_brick_stairs", new BlockStairsTC(() -> BlocksTC.stoneArcaneBrick.defaultBlockState(), BlockBehaviour.Properties.copy(BlocksTC.stoneArcaneBrick)));
+        BlocksTC.stairsAncient = registerBlock("ancient_stairs", new BlockStairsTC(() -> BlocksTC.stoneAncient.defaultBlockState(), BlockBehaviour.Properties.copy(BlocksTC.stoneAncient)));
+        BlocksTC.stairsGreatwood = registerBlock("greatwood_stairs", new BlockStairsTC(() -> BlocksTC.plankGreatwood.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)));
+        BlocksTC.stairsSilverwood = registerBlock("silverwood_stairs", new BlockStairsTC(() -> BlocksTC.plankSilverwood.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)));
 
         /* slabs */
-        BlocksTC.slabArcane = registerBlock("slab_arcane", new BlockSlabTC(false));
-        BlocksTC.slabArcaneBrick = registerBlock("slab_arcane_brick", new BlockSlabTC(false));
-        BlocksTC.slabAncient = registerBlock("slab_ancient", new BlockSlabTC(false));
-        BlocksTC.slabGreatwood = registerBlock("slab_greatwood", new BlockSlabTC(true));
-        BlocksTC.slabSilverwood = registerBlock("slab_silverwood", new BlockSlabTC(true));
+        BlocksTC.slabArcane = registerBlock("arcane_slab", new BlockSlabTC(false));
+        BlocksTC.slabArcaneBrick = registerBlock("arcane_brick_slab", new BlockSlabTC(false));
+        BlocksTC.slabAncient = registerBlock("ancient_slab", new BlockSlabTC(false));
+        BlocksTC.slabGreatwood = registerBlock("greatwood_slab", new BlockSlabTC(true));
+        BlocksTC.slabSilverwood = registerBlock("silverwood_slab", new BlockSlabTC(true));
 
         BlocksTC.pavingStoneTravel = registerBlock("paving_stone_travel", new BlockPavingStoneTravel());
         BlocksTC.pavingStoneBarrier = registerBlock("paving_stone_barrier", new BlockPavingStoneBarrier());

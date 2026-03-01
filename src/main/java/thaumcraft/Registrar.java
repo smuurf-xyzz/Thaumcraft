@@ -76,7 +76,7 @@ public class Registrar {
 
     private static void registerBlocks(RegisterEvent.RegisterHelper<Block> event) {
         ConfigBlocks.initBlocks(event);
-        ConfigBlocks.initBlockEntities();
+        ConfigBlockEntities.initBlockEntities();
     }
 
     private static void registerItems(RegisterEvent.RegisterHelper<Item> event) {

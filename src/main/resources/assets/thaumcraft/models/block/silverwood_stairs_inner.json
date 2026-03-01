@@ -1,5 +1,5 @@
 {
-    "parent": "minecraft:block/stairs",
+    "parent": "minecraft:block/inner_stairs",
     "textures": {
         "bottom": "thaumcraft:block/silverwood_plank",
         "top": "thaumcraft:block/silverwood_plank",
